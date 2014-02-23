@@ -9,7 +9,6 @@ var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(60, 2.5, 1, 20);
 camera.position.set(0, 5, 15);
-//camera.lookAt(new THREE.Vector3());
 scene.add(camera);
 
 var renderer = new THREE.WebGLRenderer();
@@ -25,16 +24,6 @@ var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.8 );
 directionalLight.position.set( 1, 2, 4).normalize();
 directionalLight.intensity=1;
 scene.add(directionalLight);
-
-/*spotlight = new THREE.SpotLight( 0xFFFFFF );
-spotlight.position.set( 0, 100, 300 );
-spotlight.castShadow=true;
-spotlight.angle = 20 * Math.PI / 180;
-spotlight.exponent = 1;
-spotlight.target.position.set( 0, 10, 0 );
-scene.add( spotlight );
-
-*/
 
 var materialWhite = new THREE.MeshPhongMaterial({color: 0xffffff});
 materialWhite.shininess=35.0;
@@ -95,48 +84,42 @@ for(var i=1;i<=16;i++)
 
 }
 
-
+var Keys = whiteKeys.concat(blackKeys);
 
 var render = function ()
 {
-    //requestAnimationFrame(render);
-    //cube.rotation.x += 0.1;
-    //cube.rotation.y += 0.1;
+
     renderer.render(scene, camera);
 };
 render();
 
 projector = new THREE.Projector();
 
-renderer.domElement.addEventListener('click', onMouseClick);
-
+renderer.domElement.addEventListener('mousedown', onMouseDown);
+renderer.domElement.addEventListener('mouseup', onMouseUp)
 
 var timer;
 
-function onMouseClick( event ) {
+function onMouseDown( event ) {
     event.preventDefault();
     var vector = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / (window.innerWidth/2.5) ) * 2 + 1, 0.5 );
     projector.unprojectVector( vector, camera );
-    var raycaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
-    var intersects = raycaster.intersectObjects( whiteKeys );
+    var rayCaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+    var intersects = rayCaster.intersectObjects( Keys );
     if ( intersects.length > 0 ) {
         var selected=intersects[ 0 ].object;
-        if(selected!=pressed)
-            {selected.rotation.x+=0.1;
-             if(pressed!=null)
-             {pressed.rotation.x-=0.1;
-
-             }
-                pressed=selected;
-
-             timer=setTimeout(function()
-                                {pressed.rotation.x-=0.1;
-                                 pressed=null;
-                                 render();
-                                },400);
-            }
+            selected.rotation.x+=0.1;
+            pressed=selected;
         render();
-    }
+
+}
+}
+
+function onMouseUp(event)
+{
+    pressed.rotation.x-=0.1;
+    pressed=null;
+    render();
 }
 
 
