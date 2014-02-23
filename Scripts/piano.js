@@ -2,9 +2,10 @@
  * Created by Dana on 22/02/14.
  */
 
-var whiteKeys = new Array();
-var blackKeys = new Array();
+var whiteKeys = [];
+var blackKeys = [];
 var pressed;
+
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(60, 2.5, 1, 20);
@@ -36,14 +37,17 @@ var keyWidth=1;
 var keyHeight=0.75;
 var keyDepth=4;
 
-for(var i=1;i<=17;i++)
+var geometry;
+var cube;
+var i;
+for(i=1;i<=17;i++)
 {
 
-    var geometry = new THREE.BoxGeometry(keyWidth, keyHeight, keyDepth);
-    var cube = new THREE.Mesh(geometry, materialWhite);
-    cube.rotation.y=-0.0;
+    geometry = new THREE.BoxGeometry(keyWidth, keyHeight, keyDepth);
+    cube = new THREE.Mesh(geometry, materialWhite);
+
     cube.rotation.x=0.4;
-    cube.rotation.z=-0.0
+
     cube.position.x=keyPositionX;
     cube.position.y=keyPositionY;
     cube.position.z=keyPositionZ;
@@ -53,14 +57,13 @@ for(var i=1;i<=17;i++)
     scene.add(cube);
 }
 var blackKeyPositionOnX=-7+0.5*keyWidth+0.03;
-for(var i=1;i<=16;i++)
+for(i=1;i<=16;i++)
 {
     if(i!=3&&i!=7&&i!=10&&i!=14)
-        {var geometry = new THREE.BoxGeometry(keyWidth /2.5, keyHeight/2, keyDepth/1.5);
-        var cube = new THREE.Mesh(geometry, materialBlack);
+        {
+        geometry = new THREE.BoxGeometry(keyWidth /2.5, keyHeight/2, keyDepth/1.5);
+        cube = new THREE.Mesh(geometry, materialBlack);
 
-        cube.rotation.y=-0.0;
-        cube.rotation.z=-0.0;
         cube.rotation.x=0.4;
 
         cube.position.x=blackKeyPositionOnX;
@@ -86,19 +89,17 @@ for(var i=1;i<=16;i++)
 
 var Keys = whiteKeys.concat(blackKeys);
 
-var render = function ()
+function render ()
 {
-
     renderer.render(scene, camera);
-};
+}
+
 render();
 
 projector = new THREE.Projector();
 
 renderer.domElement.addEventListener('mousedown', onMouseDown);
-renderer.domElement.addEventListener('mouseup', onMouseUp)
-
-var timer;
+renderer.domElement.addEventListener('mouseup', onMouseUp);
 
 function onMouseDown( event ) {
     event.preventDefault();
@@ -115,17 +116,11 @@ function onMouseDown( event ) {
 }
 }
 
-function onMouseUp(event)
+function onMouseUp()
 {
     pressed.rotation.x-=0.1;
     pressed=null;
     render();
 }
 
-
-function render() {
-
-    renderer.render( scene, camera );
-
-}
 
