@@ -1,6 +1,16 @@
 /**
  * Created by Dana on 22/02/14.
  */
+window.onload = function () {
+    MIDI.loader = new widgets.Loader;
+    MIDI.loadPlugin({
+        soundfontUrl: "MIDI/soundfont/",
+        instrument: "acoustic_grand_piano",
+        callback: function() {
+            MIDI.loader.stop();
+        }
+    });
+};
 
 var whiteKeys = [];
 var blackKeys = [];
@@ -111,6 +121,7 @@ function onMouseDown( event ) {
         var selected=intersects[ 0 ].object;
             selected.rotation.x+=0.1;
             pressed=selected;
+            NoteOn(50);
         render();
 
 }
@@ -119,8 +130,16 @@ function onMouseDown( event ) {
 function onMouseUp()
 {
     pressed.rotation.x-=0.1;
+    NoteOff(50);
     pressed=null;
     render();
 }
 
-
+function NoteOn(note)
+{
+    MIDI.noteOn(0,note,256,0);
+}
+function NoteOff(note)
+{
+    MIDI.noteOff(0,note);
+}
