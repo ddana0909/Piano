@@ -1,6 +1,39 @@
 /**
  * Created by Dana on 22/02/14.
  */
+const C1=60,
+    C1s=61,
+    D1=62,
+    D1s=63,
+    E1=64,
+    F1=65,
+    F1s=66,
+    G1=67,
+    G1s=68,
+    A1=69,
+    A1s=70,
+    B1=71,
+    C2= 72,
+    C2s=73,
+    D2=74,
+    D2s=75,
+    E2=76,
+    F2=77,
+    F2s=78,
+    G2=79,
+    G2s=80,
+    A2=81,
+    A2s=82,
+    B2=83,
+    C3=84,
+    C3s=85,
+    D3=86,
+    D3s=87,
+    E3=88
+
+keySounds=[C1,D1,E1,F1,G1,A1,B1,C2,D2,E2,F2,G2,A2,B2,C3,D3,E3];
+keySounds=keySounds.concat(C1s,D1s,F1s,G1s,A1s,C2s,D2s,F2s,G2s,A2s,C3s,D3s);
+
 window.onload = function () {
     MIDI.loader = new widgets.Loader;
     MIDI.loadPlugin({
@@ -40,17 +73,18 @@ var materialWhite = new THREE.MeshPhongMaterial({color: 0xffffff});
 materialWhite.shininess=35.0;
 var materialBlack = new THREE.MeshPhongMaterial({color: 0x000000});
 materialBlack.shininess=35.0;
-var keyPositionX=-7;
+var keyPositionX=-10;
 var keyPositionY=3;
 var keyPositionZ=5;
-var keyWidth=1;
+var keyWidth=1.25;
 var keyHeight=0.75;
 var keyDepth=4;
+var nrWhiteKeys=17;
 
 var geometry;
 var cube;
 var i;
-for(i=1;i<=17;i++)
+for(i=1;i<=nrWhiteKeys;i++)
 {
 
     geometry = new THREE.BoxGeometry(keyWidth, keyHeight, keyDepth);
@@ -62,15 +96,20 @@ for(i=1;i<=17;i++)
     cube.position.y=keyPositionY;
     cube.position.z=keyPositionZ;
     cube.receiveShadow=true;
+
+    cube.note=keySounds[i-1];
+
     keyPositionX+=keyWidth+0.03;
     whiteKeys.push(cube);
     scene.add(cube);
 }
-var blackKeyPositionOnX=-7+0.5*keyWidth+0.03;
-for(i=1;i<=16;i++)
+var x=0;
+var blackKeyPositionOnX=-10+0.5*keyWidth+0.03;
+for(i=1;i<=nrWhiteKeys-1;i++)
 {
+
     if(i!=3&&i!=7&&i!=10&&i!=14)
-        {
+        { x++;
         geometry = new THREE.BoxGeometry(keyWidth /2.5, keyHeight/2, keyDepth/1.5);
         cube = new THREE.Mesh(geometry, materialBlack);
 
@@ -88,6 +127,7 @@ for(i=1;i<=16;i++)
             else
         blackKeyPositionOnX+=keyWidth+0.03;
 
+        cube.note=keySounds[nrWhiteKeys+x-1];
 
         blackKeys.push(cube);
         scene.add(cube);
@@ -121,7 +161,7 @@ function onMouseDown( event ) {
         var selected=intersects[ 0 ].object;
             selected.rotation.x+=0.1;
             pressed=selected;
-            NoteOn(50);
+            NoteOn(selected.note);
         render();
 
 }
