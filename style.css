@@ -1,0 +1,17 @@
+#slider {
+    float: left;
+    clear: left;
+    width: 400px;
+    margin-top: 10px;
+
+}
+#slider .ui-slider-range { background: #ef2929; }
+
+/*Style for the slider button*/
+#slider .ui-slider-handle {
+    width:25px;
+    height:25px;
+    position:absolute;
+    border-style: none;
+    background:url(jQueryUi/images/slider-button.png);
+}
