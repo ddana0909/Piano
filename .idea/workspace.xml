@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51d9c789-8336-408d-99b4-586e665307a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Back1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/back.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/piano.js" afterPath="$PROJECT_DIR$/Scripts/piano.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2501" selection-end="2501" vertical-scroll-proportion="-6.6538463" vertical-offset="932" max-vertical-offset="1428">
+            <state line="65" column="10" selection-start="2505" selection-end="2505" vertical-scroll-proportion="-8.384615" vertical-offset="887" max-vertical-offset="1462">
               <folding>
                 <element signature="n#style#0;n#b#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -40,19 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="22" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="527">
+            <state line="19" column="83" selection-start="391" selection-end="391" vertical-scroll-proportion="0.7564403" vertical-offset="0" max-vertical-offset="527">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="piano.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="piano.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="23" selection-start="4143" selection-end="4143" vertical-scroll-proportion="0.059125964" vertical-offset="2782" max-vertical-offset="7106">
+            <state line="122" column="40" selection-start="2884" selection-end="2884" vertical-scroll-proportion="-8.84" vertical-offset="1853" max-vertical-offset="7106">
               <folding />
             </state>
           </provider>
@@ -73,9 +71,9 @@
       <list>
         <option value="$PROJECT_DIR$/bootstrap.css" />
         <option value="$PROJECT_DIR$/style" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Scripts/piano.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -555,7 +553,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jQueryUi/jquery-ui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="20" selection-start="1453" selection-end="1459" vertical-scroll-proportion="0.32352942" vertical-offset="924" max-vertical-offset="20315" />
+        <state line="66" column="20" selection-start="1453" selection-end="1459" vertical-scroll-proportion="0.32352942" vertical-offset="924" max-vertical-offset="20315">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jQueryUi/images/slider-button.png">
@@ -563,25 +563,25 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="527">
+        <state line="122" column="40" selection-start="2884" selection-end="2884" vertical-scroll-proportion="-8.84" vertical-offset="1853" max-vertical-offset="7106">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2501" selection-end="2501" vertical-scroll-proportion="-6.6538463" vertical-offset="932" max-vertical-offset="1428">
+        <state line="65" column="10" selection-start="2505" selection-end="2505" vertical-scroll-proportion="-8.384615" vertical-offset="887" max-vertical-offset="1462">
           <folding>
             <element signature="n#style#0;n#b#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="23" selection-start="4143" selection-end="4143" vertical-scroll-proportion="0.059125964" vertical-offset="2782" max-vertical-offset="7106">
+        <state line="19" column="83" selection-start="391" selection-end="391" vertical-scroll-proportion="0.7564403" vertical-offset="0" max-vertical-offset="527">
           <folding />
         </state>
       </provider>

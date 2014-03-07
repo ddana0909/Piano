@@ -117,10 +117,10 @@ function setScene() {
     $piano.appendChild(renderer.domElement);
 
     var light = new THREE.AmbientLight(0x333333); // soft white light
-    scene.add(light);
+    //scene.add(light);
 
     var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-    directionalLight.position.set(1, 2, 4).normalize();
+    directionalLight.position.set(10, 15, 20).normalize();
     directionalLight.intensity = 1;
     scene.add(directionalLight);
 }
@@ -156,28 +156,28 @@ function drawPiano() {
 
     //backbox
     var backboxWidth=keyWidth*nrWhiteKeys;
-    var backBoxHeight=6;
+    var backBoxHeight=13;
     var backBoxDepth=5;
     geometry= new THREE.BoxGeometry(backboxWidth+10,backBoxHeight, backBoxDepth);
     cube= new THREE.Mesh(geometry, materialBlack);
     cube.position.x=keyPositionX+backboxWidth/2;
-    cube.position.y=keyPositionY+5;
+    cube.position.y=keyPositionY;
     cube.position.z=keyPositionZ-keyDepth-0.5;
     cube.rotation.x=0.5;
     scene.add(cube);
 
-    geometry= new THREE.BoxGeometry(1,backBoxHeight, keyDepth);
+    geometry= new THREE.BoxGeometry(0.5,backBoxHeight-5, keyDepth);
     cube= new THREE.Mesh(geometry, materialBlack);
     cube.position.x=keyPositionX-1.5;
-    cube.position.y=keyPositionY-1;
+    cube.position.y=keyPositionY-2;
     cube.position.z=keyPositionZ;
     cube.rotation.x=0.4;
     scene.add(cube);
 
-    geometry= new THREE.BoxGeometry(1,backBoxHeight, keyDepth);
+    geometry= new THREE.BoxGeometry(1,backBoxHeight-5, keyDepth);
     cube= new THREE.Mesh(geometry, materialBlack);
     cube.position.x=keyPositionX+backboxWidth+1;
-    cube.position.y=keyPositionY-1;
+    cube.position.y=keyPositionY-2;
     cube.position.z=keyPositionZ;
     cube.rotation.x=0.4;
     scene.add(cube);
