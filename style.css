@@ -1,17 +1,25 @@
-#slider {
+#sliderDifficulty {
     float: left;
     clear: left;
     width: 400px;
     margin-top: 10px;
 
 }
-#slider .ui-slider-range { background: #ef2929; }
+
+#sliderDifficulty .ui-slider-range { background: #A30006; }
 
 /*Style for the slider button*/
-#slider .ui-slider-handle {
+#sliderDifficulty .ui-slider-handle {
     width:25px;
     height:25px;
     position:absolute;
     border-style: none;
     background:url(jQueryUi/images/slider-button.png);
 }
+.ui-widget-content { background: #291204; }
+
+
+
+
+
+
