@@ -7,7 +7,7 @@
 
 }
 
-#sliderDifficulty .ui-slider-range { background: #A30006; }
+#sliderDifficulty .ui-slider-range { background: #FFCC00; }
 
 /*Style for the slider button*/
 #sliderDifficulty .ui-slider-handle {
@@ -19,10 +19,6 @@
 }
 .ui-widget-content { background: #291204; }
 
-#piano {
-    margin: 2% 0%;
-    background: #999;
-}
 
 
 

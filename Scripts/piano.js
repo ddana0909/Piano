@@ -127,7 +127,7 @@ function setScene() {
 var materialPiano;
 function initPianoSettings() {
     materialWhite = new THREE.MeshPhongMaterial({color: 0xffffff, shininess: 35.0});
-    materialPurple = new THREE.MeshPhongMaterial({color: 0x9900CC});
+    materialPurple = new THREE.MeshPhongMaterial({color: 0x330330});
     materialBlack = new THREE.MeshPhongMaterial({color: 0x000000});
     materialPiano= new THREE.MeshPhongMaterial({color: 0xE8DDCB});
 
@@ -141,8 +141,8 @@ function initPianoSettings() {
 function drawPiano() {
 
 
-    var keyPositionX = -10;
-    var keyPositionY = 5;
+    var keyPositionX = -10.25;
+    var keyPositionY = 3;
     var keyPositionZ = 5;
     var keyWidth = 1.25;
     var keyHeight = 0.75;
@@ -202,7 +202,7 @@ function drawPiano() {
         scene.add(cube);
     }
     var x = 0;
-    var blackKeyPositionOnX = -10 + 0.5 * keyWidth + 0.03;
+    var blackKeyPositionOnX = -10.25 + 0.5 * keyWidth + 0.03;
     for (i = 1; i <= nrWhiteKeys - 1; i++) {
 
         if (i != 3 && i != 7 && i != 10 && i != 14) {
