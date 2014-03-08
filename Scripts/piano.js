@@ -124,11 +124,12 @@ function setScene() {
     directionalLight.intensity = 1;
     scene.add(directionalLight);
 }
-
+var materialPiano;
 function initPianoSettings() {
     materialWhite = new THREE.MeshPhongMaterial({color: 0xffffff, shininess: 35.0});
-    materialPurple = new THREE.MeshPhongMaterial({color: 0x330330});
+    materialPurple = new THREE.MeshPhongMaterial({color: 0x9900CC});
     materialBlack = new THREE.MeshPhongMaterial({color: 0x000000});
+    materialPiano= new THREE.MeshPhongMaterial({color: 0xE8DDCB});
 
     keySounds = [C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3];
     keySounds = keySounds.concat(C1s, D1s, F1s, G1s, A1s, C2s, D2s, F2s, G2s, A2s, C3s, D3s);
@@ -154,7 +155,7 @@ function drawPiano() {
     setScene();
     initPianoSettings();
 
-    //backbox
+  /* //backbox
     var backboxWidth=keyWidth*nrWhiteKeys;
     var backBoxHeight=13;
     var backBoxDepth=5;
@@ -181,7 +182,7 @@ function drawPiano() {
     cube.position.z=keyPositionZ;
     cube.rotation.x=0.4;
     scene.add(cube);
-
+*/
     for (i = 1; i <= nrWhiteKeys; i++) {
 
         geometry = new THREE.BoxGeometry(keyWidth, keyHeight, keyDepth);

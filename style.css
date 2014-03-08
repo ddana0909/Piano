@@ -1,5 +1,6 @@
 #sliderDifficulty {
 
+
     clear: left;
     width: 30%;
     margin: 1% auto;
@@ -18,6 +19,10 @@
 }
 .ui-widget-content { background: #291204; }
 
+#piano {
+    margin: 2% 0%;
+    background: #999;
+}
 
 
 
