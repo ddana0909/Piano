@@ -2,6 +2,9 @@
  * Created by Dana on 22/02/14.
  */
 
+var uiPiano=$("#pianoGame");
+var uiDrums=$('#drumsReward');
+
 function touchHandler(event) {
     var touches = event.changedTouches,
         first = touches[0],
@@ -255,7 +258,7 @@ function initEvents() {
 projector = new THREE.Projector();
 function onMouseDown(event) {
     if (nowPlaying !== null) {
-        Keys[nowPlaying].rotation.x -= 0.1;
+        Keys[nowPlaying].rotation.x =defaultRotationX;
         Keys[nowPlaying].material = materialWhite;
         nowPlaying = null;
     }
@@ -266,8 +269,8 @@ function onMouseDown(event) {
     var intersects = rayCaster.intersectObjects(Keys);
     if (intersects.length > 0) {
         var selected = intersects[ 0 ].object;
-        selected.rotation.x += 0.1;
-        pressed = selected;
+        selected.rotation.x =defaultRotationX + 0.1;
+        pressed=selected;
         NoteOn(selected.note);
         playedNotes.push(selected.note);
         render();
@@ -276,7 +279,7 @@ function onMouseDown(event) {
 }
 
 function onMouseUp() {
-    pressed.rotation.x -= 0.1;
+    pressed.rotation.x = defaultRotationX;
     NoteOff(pressed.note);
     pressed = null;
     render();
@@ -385,7 +388,7 @@ function displayArray() {
 
 function Check() {
     if (isEqual(realNotes(sampleNotes), playedNotes))
-        alert("you got it");
+        window.location.assign("drums.html");
     else
         alert("wrong");
 }

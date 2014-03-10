@@ -2,8 +2,16 @@
  * Created by Dana on 08/03/14.
  */
 window.onload = function () {
+    $.ionSound({
+        sounds: [
+            "applause"
+        ],
+        path: "sounds/",
+        multiPlay: true,
+        volume: "1.0"
+    });
 
-    MIDI.loader = new widgets.Loader;
+    $.ionSound.play("applause");
     MIDI.loadPlugin({
 
         soundfontUrl: "MIDI/soundfont/",
@@ -11,7 +19,6 @@ window.onload = function () {
         callback: function () {
             MIDI.programChange(0, 118);
             MIDI.setVolume(0, 127);
-            MIDI.loader.stop();
         }
     });
 };
@@ -116,5 +123,9 @@ function Shrink(e)
         canvas.renderAll();
     }
     return;
+}
+function goToPiano()
+{
+    window.location.assign("index.html");
 }
 
