@@ -2,8 +2,6 @@
  * Created by Dana on 22/02/14.
  */
 
-var uiPiano=$("#pianoGame");
-var uiDrums=$('#drumsReward');
 
 function touchHandler(event) {
     var touches = event.changedTouches,
@@ -252,7 +250,7 @@ function render()
 function initEvents() {
     renderer.domElement.addEventListener('mousedown', onMouseDown);
     renderer.domElement.addEventListener('mouseup', onMouseUp);
-    initTouch();
+   // initTouch();
 }
 
 projector = new THREE.Projector();
@@ -318,8 +316,8 @@ function getSample(difficulty) {
         }
         case 3:
         {
-            var random = (Math.floor((Math.random() * 10) + 1)) % 2;
-            return hard[random];
+            //var random = (Math.floor((Math.random() * 10) + 1)) % 2;
+            return hard[1];
         }
 
     }
