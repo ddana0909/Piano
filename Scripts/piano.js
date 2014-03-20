@@ -250,7 +250,7 @@ function render()
 function initEvents() {
     renderer.domElement.addEventListener('mousedown', onMouseDown);
     renderer.domElement.addEventListener('mouseup', onMouseUp);
-   // initTouch();
+    initTouch();
 }
 
 projector = new THREE.Projector();
@@ -316,8 +316,8 @@ function getSample(difficulty) {
         }
         case 3:
         {
-            //var random = (Math.floor((Math.random() * 10) + 1)) % 2;
-            return hard[1];
+            var random = (Math.floor((Math.random() * 10) + 1)) % 2;
+            return hard[random];
         }
 
     }

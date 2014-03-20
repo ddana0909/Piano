@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48d2d2e3-ec66-400f-a7f3-d04c968535c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/ClosedHighHat.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/Crash.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/FloorTom.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/HighHatPedal.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/KickDrum.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/OpenHighHat.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/Ride.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/Rim.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/Snare.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/Tom1.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/tobe/Tom2.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drums.html" afterPath="$PROJECT_DIR$/drums.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/drums.js" afterPath="$PROJECT_DIR$/Scripts/drums.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/piano.js" afterPath="$PROJECT_DIR$/Scripts/piano.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,7 +30,7 @@
       <file leaf-file-name="drums.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drums.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="476">
+            <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -51,7 +39,7 @@
       <file leaf-file-name="drums.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/drums.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="27" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2737">
+            <state line="107" column="27" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2737">
               <folding />
             </state>
           </provider>
@@ -66,19 +54,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="2744" selection-end="2744" vertical-scroll-proportion="-7.8076925" vertical-offset="970" max-vertical-offset="1581">
+            <state line="82" column="0" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.69394433" vertical-offset="970" max-vertical-offset="1581">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="piano.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="piano.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="320" column="9" selection-start="10141" selection-end="10141" vertical-scroll-proportion="0.8055556" vertical-offset="4947" max-vertical-offset="7140">
+            <state line="45" column="12" selection-start="1319" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="7140">
               <folding />
             </state>
           </provider>
@@ -100,17 +88,17 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/Scripts/src/fabric.js" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/drums.html" />
         <option value="$PROJECT_DIR$/Scripts/drums.js" />
         <option value="$PROJECT_DIR$/Scripts/piano.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1318" />
+    <option name="width" value="1320" />
     <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -212,6 +200,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WritingApp" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -226,14 +215,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -244,15 +225,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -291,14 +280,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1318" height="784" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24961598" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25076687" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -332,6 +321,111 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/drums.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/drums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="27" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/src/ion.sound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="3111">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="12" selection-start="1319" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="7140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drums.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/drums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="27" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/src/ion.sound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="3111">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0" vertical-offset="970" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="12" selection-start="1319" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="7140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drums.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/drums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="27" selection-start="3268" selection-end="3268" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/src/ion.sound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="3111">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0" vertical-offset="970" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="12" selection-start="1319" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="7140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drums.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="6" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="748">
@@ -409,53 +503,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MIDI/soundfont/acoustic_grand_piano-mp3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MIDI/soundfont/acoustic_grand_piano-ogg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MIDI/soundfont/synth_drum-mp3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MIDI/soundfont/synth_drum-ogg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="348602" selection-end="348602" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <folding />
-        </state>
+        <state line="24" column="5" selection-start="348602" selection-end="348602" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MIDI/soundfont/glockenspiel-mp3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MIDI/soundfont/glockenspiel-ogg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="130" selection-end="142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <folding />
-        </state>
+        <state line="3" column="15" selection-start="130" selection-end="142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/src/fabric.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21640" column="39" selection-start="730240" selection-end="730240" vertical-scroll-proportion="9.299843" vertical-offset="361956" max-vertical-offset="368305">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="21640" column="39" selection-start="730240" selection-end="730240" vertical-scroll-proportion="9.299843" vertical-offset="361956" max-vertical-offset="368305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/src/ion.sound.js">
@@ -465,16 +543,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2744" selection-end="2744" vertical-scroll-proportion="-7.8076925" vertical-offset="970" max-vertical-offset="1581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drums.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="476">
+        <state line="15" column="7" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
@@ -488,7 +559,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/piano.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="320" column="9" selection-start="10141" selection-end="10141" vertical-scroll-proportion="0.8055556" vertical-offset="4947" max-vertical-offset="7140">
+        <state line="45" column="12" selection-start="1319" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="7140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.69394433" vertical-offset="970" max-vertical-offset="1581">
           <folding />
         </state>
       </provider>
