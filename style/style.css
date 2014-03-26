@@ -15,9 +15,10 @@
     height:25px;
     position:absolute;
     border-style: none;
-    background:url(jQueryUi/images/slider-button.png);
+    background:url(../jQueryUi/images/slider-button.png);
 }
 .ui-widget-content { background: #291204; }
+
 
 
 

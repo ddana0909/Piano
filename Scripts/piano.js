@@ -41,35 +41,35 @@ function initTouch() {
     document.addEventListener('touchend', touchHandler, true);
     document.addEventListener('touchcancel', touchHandler, true);
    }
-const C1 = 60,
-    C1s = 61,
-    D1 = 62,
-    D1s = 63,
-    E1 = 64,
-    F1 = 65,
-    F1s = 66,
-    G1 = 67,
-    G1s = 68,
-    A1 = 69,
-    A1s = 70,
-    B1 = 71,
-    C2 = 72,
-    C2s = 73,
-    D2 = 74,
-    D2s = 75,
-    E2 = 76,
-    F2 = 77,
-    F2s = 78,
-    G2 = 79,
-    G2s = 80,
-    A2 = 81,
-    A2s = 82,
-    B2 = 83,
-    C3 = 84,
-    C3s = 85,
-    D3 = 86,
-    D3s = 87,
-    E3 = 88;
+const  C1 = 48,
+    C1s = 49,
+    D1 = 50,
+    D1s = 51,
+    E1 = 52,
+    F1 = 53,
+    F1s = 54,
+    G1 = 55,
+    G1s = 56,
+    A1 = 57,
+    A1s = 58,
+    B1 = 59,
+    C2 = 60,
+    C2s = 61,
+    D2 = 62,
+    D2s = 63,
+    E2 = 64,
+    F2 = 65,
+    F2s = 66,
+    G2 = 67,
+    G2s = 68,
+    A2 = 69,
+    A2s = 70,
+    B2 = 71,
+    C3 = 72,
+    C3s = 73,
+    D3 = 74,
+    D3s = 75,
+    E3 = 76;
 var whiteKeys = [];
 var blackKeys = [];
 var keySounds;
@@ -85,11 +85,24 @@ var materialBlack;
 
 var defaultRotationX;
 var playedNotes;
+var score;
 
+window.onload = AppStart;
+function AppStart() {
 
-window.onload = function () {
     drawPiano();
     render();
+    $.ionSound({
+        sounds: [
+            "instructions",
+            "goodJob",
+            "bad"
+        ],
+        path: "sounds/",
+        multiPlay: true,
+        volume: "1.0"
+    });
+    $.ionSound.play("instructions");
     MIDI.loader = new widgets.Loader;
     MIDI.loadPlugin({
         soundfontUrl: "MIDI/soundfont/",
@@ -101,9 +114,11 @@ window.onload = function () {
     });
     initEvents();
 
-};
+}
+
 
 function setScene() {
+
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(60, 2.5, 1, 20);
@@ -116,9 +131,6 @@ function setScene() {
 
     var $piano=document.getElementById('piano');
     $piano.appendChild(renderer.domElement);
-
-    var light = new THREE.AmbientLight(0x333333); // soft white light
-    //scene.add(light);
 
     var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
     directionalLight.position.set(10, 15, 20).normalize();
@@ -297,11 +309,16 @@ var previousMaterial;
 var hard = ['data:audio/midi;base64,TVRoZAAAAAYAAAABA8BNVHJrAAABUQD/IAEAAP8DB1RyYWNrIDEA/38PBQ8cMjAxNC4wMi4wMwEDAP9/KgUPLU1pY3Jvc29mdCBTYW5zIFNlcmlmLDguMjUsRmFsc2UsRmFsc2UsMQD/f0MFDxIDA39/AP8BBDdTcGVha2VycyAvIEhlYWRwaG9uZXMgKElEVCBIaWdoIERlZmluaXRpb24gQXVkaW8gQ09ERUMpAP9YBAQCGAgA/1gEAwIYCACQTECDYIBMAACQS0CDYIBLAACQTECDYIBMAACQS0CDYIBLAACQTECDYIBMAACQR0CDYIBHAACQSkCDYIBKAACQSECDYIBIAACQRUCHQIBFAAD/fwgFDxoXQARAAACQPECDYIA8AACQQECDYIBAAACQRUCDYIBFAACQR0CHQIBHAACQQECDYIBAAACQRECDYIBEAACQR0CDYIBHAACQSECHQIBIAAD/LwA=',
     'data:audio/midi;base64,TVRoZAAAAAYAAAABA8BNVHJrAAABRQD/IAEAAP8DB1RyYWNrIDEA/38PBQ8cMjAxNC4wMi4wMwEDAP9/KgUPLU1pY3Jvc29mdCBTYW5zIFNlcmlmLDguMjUsRmFsc2UsRmFsc2UsMQD/f0MFDxIDA39/AP8BBDdTcGVha2VycyAvIEhlYWRwaG9uZXMgKElEVCBIaWdoIERlZmluaXRpb24gQXVkaW8gQ09ERUMpAP9YBAQCGAgA/1gEAwIYCACQSECHQIBIAACQQECHQIBAAACQQECHQIBAAACQSECHQIBIAACQSECPAIBIAACQQECHQIBAAACQQECHQIBAAACQSECHQIBIAACQSECHQIBIAACQQECHQIBAAACQQUCHQIBBAACQQECHQIBAAACQPkCHQIA+AACQPkCHQIA+AACQPkCHQIA+AACQR0CHQIBHAACQR0CHQIBHAAD/LwA='
 ];
+//HingDance+SwamLake
+var medium=['data:audio/midi;base64,TVRoZAAAAAYAAAABA8BNVHJrAAABEQD/IAEAAP8DB1RyYWNrIDEAwAAA/yABAQD/AwdUcmFjayAyAMEAAP9RAwW42AD/fw8FDxwyMDE0LjAyLjAzAQMA/38qBQ8tTWljcm9zb2Z0IFNhbnMgU2VyaWYsOC4yNSxGYWxzZSxGYWxzZSwxAP9/QwUPEgMDf38A/wEEN1NwZWFrZXJzIC8gSGVhZHBob25lcyAoSURUIEhpZ2ggRGVmaW5pdGlvbiBBdWRpbyBDT0RFQykA/1gEBAIYCACQO0AA/38EBQ8KAZZAgDsAAJBAQIdAgEAAAJBDQJZAgEMAAJBAQIdAgEAAAJA/QI8AgD8AAJBAQIdAgEAAAJBCQIdAgEIAAJBAQJ4AgEAAAP8vAA==',
+'data:audio/midi;base64,TVRoZAAAAAYAAAABA8BNVHJrAAABIwD/IAEAAP8DB1RyYWNrIDEAwAAA/yABAQD/AwdUcmFjayAyAMEAAP9RAwW42AD/fw8FDxwyMDE0LjAyLjAzAQMA/38qBQ8tTWljcm9zb2Z0IFNhbnMgU2VyaWYsOC4yNSxGYWxzZSxGYWxzZSwxAP9/QwUPEgMDf38A/wEEN1NwZWFrZXJzIC8gSGVhZHBob25lcyAoSURUIEhpZ2ggRGVmaW5pdGlvbiBBdWRpbyBDT0RFQykA/1gEBAIYCACQQEAA/38EBQ8KAZ4AgEAAAJA5QIdAgDkAAJA7QIdAgDsAAJA8QIdAgDwAAJA+QIdAgD4AAJBAQJZAgEAAAJA8QIdAgDwAAJBAQJZAgEAAAJA8QIdAgDwAAJBAQJZAgEAAAP8vAA=='
+];
+
 //easy. first-ArpegiuDoMajor second-ArpediuReMajor
 var easy = ['data:audio/midi;base64,TVRoZAAAAAYAAAABA8BNVHJrAAAAywD/IAEAAP8DB1RyYWNrIDEAwAAA/38PBQ8cMjAxNC4wMi4wMwEDAP9/KgUPLU1pY3Jvc29mdCBTYW5zIFNlcmlmLDguMjUsRmFsc2UsRmFsc2UsMQD/f0MFDxIDA39/AP8BBDdTcGVha2VycyAvIEhlYWRwaG9uZXMgKElEVCBIaWdoIERlZmluaXRpb24gQXVkaW8gQ09ERUMpAP9YBAQCGAgAkDxAh0CAPAAAkEBAh0CAQAAAkENAh0CAQwAAkEhAh0CASAAA/y8A',
     'data:audio/midi;base64,TVRoZAAAAAYAAAABA8BNVHJrAAAA0AD/IAEAAP8DB1RyYWNrIDEA/38PBQ8cMjAxNC4wMi4wMwEDAP9/KgUPLU1pY3Jvc29mdCBTYW5zIFNlcmlmLDguMjUsRmFsc2UsRmFsc2UsMQD/f0MFDxIDA39/AP8BBDdTcGVha2VycyAvIEhlYWRwaG9uZXMgKElEVCBIaWdoIERlZmluaXRpb24gQXVkaW8gQ09ERUMpAP9YBAQCGAgA/1gEAwIYCACQPkCHQIA+AACQQUCHQIBBAACQRUCHQIBFAACQSkCHQIBKAAD/LwA='
 ];
-var medium = [];
+
 function getSample(difficulty) {
     switch (difficulty) {
         case 1:
@@ -316,8 +333,8 @@ function getSample(difficulty) {
         }
         case 3:
         {
-            var random = (Math.floor((Math.random() * 10) + 1)) % 2;
-            return hard[random];
+
+            return hard[0];
         }
 
     }
@@ -335,7 +352,7 @@ function play(song) {
             clearTimeout(timer);
             render();
         }
-        nowPlaying = data.note - 60;
+        nowPlaying = data.note - 48;
         previousMaterial = Keys[nowPlaying].material;
         Keys[nowPlaying].material = materialPurple;
         Keys[nowPlaying].rotation.x += 0.1;
@@ -386,9 +403,36 @@ function displayArray() {
 
 function Check() {
     if (isEqual(realNotes(sampleNotes), playedNotes))
-        window.location.assign("drums.html");
+        {
+            updateScore(100);
+            toast();
+            $.ionSound.play("goodJob");
+            setInterval(function(){window.location.assign("drums.html")},3000);
+
+        }
     else
-        alert("wrong");
+    {    $.ionSound.play("bad");
+        bootbox.dialog({
+            message: "<div class='text-center'><br/><img src='images/sad.jpg'/></div>",
+            title: "<b>You got it wrong</b>",
+            className:"text-center",
+            onEscape: function() {
+                replaySample();
+            },
+            buttons:
+            {
+                retry:
+                {
+                    label: "&#8635;Retry ",
+                    className: "btn btn-lg btn-info",
+                    callback: function() {
+                        replaySample();
+                    }
+
+                }
+            }
+        });
+}
 }
 function getDif() {
     alert(difficulty);
@@ -411,4 +455,34 @@ function replaySample() {
     playedNotes = [];
     sampleNotes = [];
     play(selectedSong);
+}
+
+function toast()
+{
+    toastr.options=
+    {
+        "closeButton": false,
+        "debug": false,
+        "positionClass": "toast-top-left",
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+    toastr.warning("+100 Points","GOOD!");
+}
+
+function updateScore(score)
+{
+    $.ajax({
+        type: "POST",
+        url: 'Piano/php/score.php',
+        data: {score: score}
+
+    });
 }
